@@ -1,126 +1,368 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Friends of Guimaras</title>
 
   <style>
+    * { box-sizing: border-box; }
     body {
-      font-family: Arial, sans-serif;
-      background: #f6f1e7;
       margin: 0;
-      padding: 0;
-      color: #1f2937;
-    }
-
-    .hero {
-      background: linear-gradient(135deg, #047857, #0f766e);
-      color: white;
-      text-align: center;
-      padding: 100px 20px;
-    }
-
-    .hero h1 {
-      font-size: 64px;
-      margin-bottom: 10px;
-    }
-
-    .hero h2 {
-      font-weight: normal;
-      font-size: 28px;
-      color: #fde68a;
-      margin-bottom: 30px;
-    }
-
-    .hero p {
-      max-width: 700px;
-      margin: auto;
-      font-size: 20px;
+      font-family: Arial, sans-serif;
+      background: #f7f1e6;
+      color: #102033;
       line-height: 1.6;
     }
 
-    .section {
-      max-width: 1000px;
-      margin: auto;
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(10px);
+      padding: 16px 8%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    }
+
+    header strong { color: #047857; font-size: 22px; }
+    nav a {
+      margin-left: 22px;
+      text-decoration: none;
+      color: #102033;
+      font-weight: bold;
+    }
+
+    .hero {
+      min-height: 78vh;
+      background:
+        linear-gradient(rgba(0,0,0,0.48), rgba(0,0,0,0.48)),
+        url('header.jpg');
+      background-size: cover;
+      background-position: center;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
       padding: 80px 20px;
+    }
+
+    .hero h1 {
+      font-size: clamp(48px, 8vw, 90px);
+      margin: 0;
+      line-height: 1.05;
+    }
+
+    .hero h2 {
+      color: #fde68a;
+      font-size: clamp(24px, 3vw, 36px);
+      font-weight: normal;
+      margin: 20px 0;
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: auto;
+      font-size: 20px;
+    }
+
+    .button {
+      display: inline-block;
+      margin-top: 30px;
+      padding: 14px 28px;
+      background: #facc15;
+      color: #102033;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 999px;
+    }
+
+    section {
+      max-width: 1180px;
+      margin: auto;
+      padding: 80px 24px;
+    }
+
+    .intro {
+      text-align: center;
+      max-width: 850px;
+    }
+
+    h2.section-title {
+      font-size: 42px;
+      color: #047857;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 28px;
     }
 
     .card {
       background: white;
-      padding: 30px;
-      border-radius: 20px;
-      margin-top: 30px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      border-radius: 26px;
+      overflow: hidden;
+      box-shadow: 0 12px 35px rgba(0,0,0,0.09);
     }
 
-    h3 {
+    .card img {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .card-content {
+      padding: 28px;
+    }
+
+    .card h3 {
       color: #047857;
-      font-size: 32px;
+      font-size: 26px;
+      margin-top: 0;
+    }
+
+    .donate {
+      background: linear-gradient(135deg, #047857, #0f766e);
+      color: white;
+      border-radius: 32px;
+      padding: 60px;
+      text-align: center;
+      box-shadow: 0 16px 40px rgba(0,0,0,0.16);
+    }
+
+    .donate h2 {
+      font-size: 44px;
+      margin-top: 0;
+    }
+
+    .donation-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      margin-top: 35px;
+    }
+
+    .donation-box {
+      background: rgba(255,255,255,0.14);
+      padding: 24px;
+      border-radius: 22px;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 18px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 22px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    }
+
+    .video-box {
+      background: white;
+      border-radius: 28px;
+      padding: 30px;
+      text-align: center;
+      box-shadow: 0 12px 35px rgba(0,0,0,0.09);
+    }
+
+    .video-placeholder {
+      background: #e5e7eb;
+      border-radius: 22px;
+      padding: 80px 20px;
+      color: #4b5563;
+      font-size: 20px;
+    }
+
+    .contact {
+      background: white;
+      border-radius: 28px;
+      padding: 45px;
+      text-align: center;
+      box-shadow: 0 12px 35px rgba(0,0,0,0.09);
     }
 
     footer {
       background: #111827;
       color: white;
       text-align: center;
-      padding: 40px;
-      margin-top: 80px;
+      padding: 35px;
+    }
+
+    @media (max-width: 700px) {
+      header {
+        display: block;
+        text-align: center;
+      }
+      nav {
+        margin-top: 10px;
+      }
+      nav a {
+        margin: 0 8px;
+        font-size: 14px;
+      }
+      .donate {
+        padding: 35px 22px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <section class="hero" style="
-background:
-linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)),
-url('header.jpg');
-background-size: cover;
-background-position: center;
-">
+<header>
+  <strong>Friends of Guimaras</strong>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#donate">Donate</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<div class="hero">
+  <div>
     <h1>Friends of Guimaras</h1>
     <h2>Supporting people. Building futures.</h2>
-
     <p>
       A small community-driven initiative supporting people and local projects in Guimaras, Philippines.
     </p>
-  </section>
+    <a class="button" href="#donate">Support our work</a>
+  </div>
+</div>
 
-  <section class="section">
+<section id="about" class="intro">
+  <h2 class="section-title">Real friendship. Real support.</h2>
+  <p>
+    Friends of Guimaras is a volunteer initiative built on friendship, compassion and a shared wish to support people and communities in Guimaras, Philippines.
+  </p>
+  <p>
+    The work is mainly led by Igor, Phil and Hartmut. Friends and supporters contribute through donations, visits, materials, practical work and encouragement.
+  </p>
+</section>
+
+<section id="projects">
+  <h2 class="section-title">Our projects</h2>
+
+  <div class="cards">
     <div class="card">
-      <h3>About us</h3>
-
-      <p>
-        Friends of Guimaras is a volunteer initiative built on friendship, compassion and a shared wish to support people and communities in Guimaras, Philippines.
-      </p>
-
-      <p>
-        The work is mainly led by Igor, Phil and Hartmut. Friends and supporters contribute through donations, visits, materials, practical work and encouragement.
-      </p>
+      <img src="project_food.jpg" alt="Food support in Guimaras">
+      <div class="card-content">
+        <h3>Food & daily support</h3>
+        <p>
+          Helping with food, basic needs and practical support for families and people who need encouragement and assistance.
+        </p>
+      </div>
     </div>
 
     <div class="card">
-      <h3>Our mission</h3>
-
-      <p>
-        We support education, practical community help and long-term opportunities for people in Guimaras.
-      </p>
+      <img src="project_medical.jpg" alt="Medical support">
+      <div class="card-content">
+        <h3>Medical help</h3>
+        <p>
+          Supporting urgent medical needs and helping people access basic care where possible.
+        </p>
+      </div>
     </div>
 
     <div class="card">
-      <h3>Contact</h3>
-
-      <p>
-        Email: info@friendsofguimaras.org
-      </p>
-
-      <p>
-        Website: friendsofguimaras.org
-      </p>
+      <img src="project_houses.jpg" alt="Housing support">
+      <div class="card-content">
+        <h3>Housing & community help</h3>
+        <p>
+          Supporting practical local projects that improve living conditions step by step.
+        </p>
+      </div>
     </div>
-  </section>
 
-  <footer>
-    © 2026 Friends of Guimaras
-  </footer>
+    <div class="card">
+      <img src="project_glasses.jpg" alt="Glasses support">
+      <div class="card-content">
+        <h3>Education & opportunity</h3>
+        <p>
+          Helping children, youth and families with small but meaningful support that can open new opportunities.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="donate">
+  <div class="donate">
+    <h2>Your support makes a difference.</h2>
+    <p>
+      Donations help us support food, medical needs, materials, housing-related help and local projects in Guimaras.
+    </p>
+
+    <div class="donation-grid">
+      <div class="donation-box">
+        <h3>€10</h3>
+        <p>can help with small everyday needs.</p>
+      </div>
+      <div class="donation-box">
+        <h3>€50</h3>
+        <p>can support food, materials or local help.</p>
+      </div>
+      <div class="donation-box">
+        <h3>€100+</h3>
+        <p>can contribute to larger project needs.</p>
+      </div>
+    </div>
+
+    <a class="button" href="mailto:info@friendsofguimaras.org">Contact us to donate</a>
+  </div>
+</section>
+
+<section id="gallery">
+  <h2 class="section-title">Photos from Guimaras</h2>
+
+  <div class="gallery">
+    <img src="gallery_1.jpg" alt="Guimaras project photo 1">
+    <img src="gallery_2.jpg" alt="Guimaras project photo 2">
+    <img src="gallery_3.jpg" alt="Guimaras project photo 3">
+    <img src="project_food.jpg" alt="Food support">
+    <img src="project_medical.jpg" alt="Medical support">
+    <img src="project_houses.jpg" alt="Housing support">
+  </div>
+</section>
+
+<section id="videos">
+  <h2 class="section-title">Videos</h2>
+  <div class="video-box">
+    <div class="video-placeholder">
+      Videos from Guimaras can be added here soon.<br>
+      Best option: upload videos to YouTube as “unlisted” and embed them here.
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="contact">
+    <h2 class="section-title">Get in touch</h2>
+    <p>
+      Would you like to support, donate, share ideas or learn more about the projects in Guimaras?
+    </p>
+    <p><strong>Email:</strong> info@friendsofguimaras.org</p>
+    <p><strong>Website:</strong> friendsofguimaras.org</p>
+  </div>
+</section>
+
+<footer>
+  © 2026 Friends of Guimaras · Supporting people. Building futures.
+</footer>
 
 </body>
 </html>
