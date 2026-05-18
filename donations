@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>More Donation Options | Friends of Guimaras</title>
+
+  <style>
+    * { box-sizing: border-box; }
+
+    body{
+      margin:0;
+      font-family:Arial,sans-serif;
+      background:#f7f1e6;
+      color:#102033;
+    }
+
+    header{
+      background:#047857;
+      color:white;
+      padding:22px;
+      text-align:center;
+    }
+
+    h1{
+      margin:0;
+      font-size:42px;
+    }
+
+    .container{
+      max-width:1200px;
+      margin:auto;
+      padding:60px 24px;
+    }
+
+    .intro{
+      text-align:center;
+      margin-bottom:50px;
+      font-size:20px;
+    }
+
+    .donation-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:24px;
+    }
+
+    .donation-box{
+      background:white;
+      border-radius:28px;
+      padding:30px;
+      text-align:center;
+      box-shadow:0 10px 30px rgba(0,0,0,0.08);
+    }
+
+    .donation-box h3{
+      color:#047857;
+      font-size:28px;
+      margin-top:0;
+    }
+
+    .donation-box p{
+      min-height:90px;
+    }
+
+    .donation-box strong{
+      display:block;
+      margin-top:18px;
+      font-size:34px;
+      color:#facc15;
+    }
+
+    .donate-button{
+      display:inline-block;
+      margin-top:24px;
+      padding:14px 24px;
+      background:#facc15;
+      color:#102033;
+      text-decoration:none;
+      font-weight:bold;
+      border-radius:999px;
+      transition:0.3s;
+    }
+
+    .donate-button:hover{
+      transform:scale(1.05);
+      background:#fde047;
+    }
+
+    .back-button{
+      display:inline-block;
+      margin-top:60px;
+      background:#047857;
+      color:white;
+      padding:14px 24px;
+      border-radius:999px;
+      text-decoration:none;
+      font-weight:bold;
+    }
+
+    footer{
+      margin-top:70px;
+      background:#111827;
+      color:white;
+      text-align:center;
+      padding:30px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>More Ways to Support</h1>
+</header>
+
+<div class="container">
+
+  <div class="intro">
+    Every donation helps support people, families and local projects in Guimaras, Philippines.
+  </div>
+
+  <div class="donation-grid">
+
+    <div class="donation-box">
+      <h3>🛏️ Sleeping Mats</h3>
+      <p>
+        Provide sleeping mats and basic comfort for children.
+      </p>
+
+      <strong>€25</strong>
+
+      <a class="donate-button"
+        href="https://paypal.me/YOURPAYPALNAME/25"
+        target="_blank">
+        Donate a Mat
+      </a>
+    </div>
+
+    <div class="donation-box">
+      <h3>📚 Become a Scholar</h3>
+      <p>
+        Support one student for two semesters and help create future opportunities.
+      </p>
+
+      <strong>€250</strong>
+
+      <a class="donate-button"
+        href="https://paypal.me/YOURPAYPALNAME/250"
+        target="_blank">
+        Support a Student
+      </a>
+    </div>
+
+    <div class="donation-box">
+      <h3>🏠 Housing Help</h3>
+      <p>
+        Support simple housing repairs and shelter projects for families.
+      </p>
+
+      <strong>€100+</strong>
+
+      <a class="donate-button"
+        href="https://paypal.me/YOURPAYPALNAME/100"
+        target="_blank">
+        Donate for Housing
+      </a>
+    </div>
+
+    <div class="donation-box">
+      <h3>💛 General Donation</h3>
+      <p>
+        Help support ongoing local projects, emergency needs and community support.
+      </p>
+
+      <strong>Any Amount</strong>
+
+      <a class="donate-button"
+        href="https://paypal.me/YOURPAYPALNAME"
+        target="_blank">
+        Donate Now
+      </a>
+    </div>
+
+  </div>
+
+  <div style="text-align:center;">
+    <a class="back-button" href="index.html">
+      ← Back to Homepage
+    </a>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 Friends of Guimaras · Supporting people. Building futures.
+</footer>
+
+</body>
+</html>
