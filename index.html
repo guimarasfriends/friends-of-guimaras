@@ -161,6 +161,23 @@
   font-size:28px;
   color:#facc15;
 }
+
+    .donate-button{
+  display:inline-block;
+  margin-top:20px;
+  padding:12px 22px;
+  background:#facc15;
+  color:#102033;
+  text-decoration:none;
+  font-weight:bold;
+  border-radius:999px;
+  transition:0.3s;
+}
+
+.donate-button:hover{
+  transform:scale(1.05);
+  background:#fde047;
+}
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -314,11 +331,17 @@
 
  <div class="donation-grid">
 
-  <div class="donation-box">
-    <h3>🐔 Chicken Donation</h3>
-    <p>Provide chickens for a family to support food and income.</p>
-    <strong>€15</strong>
-  </div>
+<div class="donation-box">
+  <h3>🐔 Chicken Donation</h3>
+  <p>Provide chickens for a family to support food and income.</p>
+  <strong>€15</strong>
+
+  <a class="donate-button"
+  href="https://paypal.me/YOURPAYPALNAME/15"
+  target="_blank">
+    Donate a Chicken
+  </a>
+</div>
 
   <div class="donation-box">
     <h3>🐐 Goat Sponsorship</h3>
