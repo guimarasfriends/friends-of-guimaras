@@ -161,31 +161,52 @@
     }
 
     .donation-box {
-      background: white;
-      padding: 30px;
-      border-radius: 28px;
-      text-align: center;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-      color: #102033;
+  background: rgba(255,255,255,0.14);
+  backdrop-filter: blur(6px);
 
-      display: flex;
-      flex-direction: column;
+  padding: 30px;
+  border-radius: 28px;
+  text-align: center;
 
-      min-height: 520px;
-      width: 260px;
-    }
+  box-shadow: 0 10px 30px rgba(0,0,0,0.10);
+
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+
+  min-height: 520px;
+  width: 260px;
+      .donation-box {
+  background: rgba(255,255,255,0.14);
+  backdrop-filter: blur(6px);
+
+  padding: 30px;
+  border-radius: 28px;
+  text-align: center;
+
+  box-shadow: 0 10px 30px rgba(0,0,0,0.10);
+
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+
+  min-height: 520px;
+  width: 260px;
+        }
 
     .donation-box h3 {
-      color: #047857;
-      font-size: 28px;
-      margin: 0 0 30px 0;
+  color: white;
+  font-size: 28px;
+  margin: 0 0 30px 0;
 
-      min-height: 90px;
+  min-height: 90px;
 
-      display: flex;
-      align-items: flex-start;
-      justify-content: center;
-    }
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+}
 
     .donation-content {
       flex-grow: 1;
@@ -195,10 +216,9 @@
       justify-content: center;
     }
 
-    .donation-box p {
-      color: #102033;
-    }
-
+   .donation-box p {
+  color: white;
+}
     .donation-box strong {
       display: block;
       margin-top: 18px;
@@ -210,17 +230,21 @@
   display: inline-block;
   margin-top: 20px;
   padding: 12px 22px;
-  background: #047857;
-  color: white;
+
+  background: #facc15;
+  color: #102033;
+
   text-decoration: none;
   font-weight: bold;
+
   border-radius: 999px;
-  border: 2px solid white;
+
   transition: 0.3s;
+}
 
 .donate-button:hover {
   transform: scale(1.05);
-  background: #065f46;
+  background: #fde047;
 }
 
     .donate-button:hover {
