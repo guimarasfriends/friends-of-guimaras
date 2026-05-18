@@ -78,16 +78,20 @@
     }
 
     .button {
-  display: inline-block;
-  margin-top: 30px;
-  padding: 14px 28px;
-  background: #047857;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 999px;
-  border: 2px solid white;
-}
+      display: inline-block;
+      margin-top: 30px;
+      padding: 14px 28px;
+      background: #047857;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 999px;
+      border: 2px solid white;
+    }
+
+    .button:hover {
+      background: #065f46;
+    }
 
     section {
       max-width: 1180px;
@@ -160,48 +164,41 @@
       flex-wrap: nowrap;
     }
 
-   .donation-box {
-  background: rgba(255,255,255,0.14);
-  backdrop-filter: blur(6px);
-
-  padding: 30px;
-  border-radius: 28px;
-  text-align: center;
-
-  box-shadow: 0 10px 30px rgba(0,0,0,0.10);
-
-  color: white;
-
-  display: flex;
-  flex-direction: column;
-
-  min-height: 520px;
-  width: 260px;
-}
+    .donation-box {
+      background: rgba(255,255,255,0.14);
+      backdrop-filter: blur(6px);
+      padding: 30px;
+      border-radius: 28px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.10);
+      color: white;
+      display: flex;
+      flex-direction: column;
+      min-height: 520px;
+      width: 260px;
+    }
 
     .donation-box h3 {
-  color: white;
-  font-size: 28px;
-  margin: 0 0 30px 0;
-
-  min-height: 90px;
-
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-}
+      color: white;
+      font-size: 28px;
+      margin: 0 0 30px 0;
+      min-height: 90px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+    }
 
     .donation-content {
       flex-grow: 1;
-
       display: flex;
       flex-direction: column;
       justify-content: center;
     }
 
-   .donation-box p {
-  color: white;
-}
+    .donation-box p {
+      color: white;
+    }
+
     .donation-box strong {
       display: block;
       margin-top: 18px;
@@ -209,26 +206,17 @@
       color: #facc15;
     }
 
-.donate-button {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 22px;
-
-  background: #facc15;
-  color: #102033;
-
-  text-decoration: none;
-  font-weight: bold;
-
-  border-radius: 999px;
-
-  transition: 0.3s;
-}
-
-.donate-button:hover {
-  transform: scale(1.05);
-  background: #fde047;
-}
+    .donate-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 22px;
+      background: #facc15;
+      color: #102033;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 999px;
+      transition: 0.3s;
+    }
 
     .donate-button:hover {
       transform: scale(1.05);
@@ -248,302 +236,55 @@
       border-radius: 22px;
       box-shadow: 0 8px 24px rgba(0,0,0,0.12);
     }
+
     .more-gallery-box {
-  background: #047857;
-  color: white;
-  border-radius: 22px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  text-align: center;
-  text-decoration: none;
-
-  min-height: 250px;
-
-  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
-
-  transition: 0.3s;
-}
-
-.more-gallery-box:hover {
-  transform: scale(1.03);
-  background: #065f46;
-}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Friends of Guimaras</title>
-
-  <style>
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f7f1e6;
-      color: #102033;
-      line-height: 1.6;
-    }
-
-    header {
-      position: sticky;
-      top: 0;
-      z-index: 10;
-      background: rgba(255,255,255,0.92);
-      backdrop-filter: blur(10px);
-      padding: 16px 8%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
-    }
-
-    header strong {
-      color: #047857;
-      font-size: 22px;
-    }
-
-    nav a {
-      margin-left: 22px;
-      text-decoration: none;
-      color: #102033;
-      font-weight: bold;
-    }
-
-    .hero {
-      min-height: 78vh;
-      background:
-        linear-gradient(rgba(0,0,0,0.48), rgba(0,0,0,0.48)),
-        url('header.jpg');
-      background-size: cover;
-      background-position: center;
+      background: #047857;
       color: white;
+      border-radius: 22px;
       display: flex;
       align-items: center;
       justify-content: center;
       text-align: center;
-      padding: 80px 20px;
+      text-decoration: none;
+      min-height: 250px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+      transition: 0.3s;
     }
 
-    .hero h1 {
-      font-size: clamp(48px, 8vw, 90px);
-      margin: 0;
-      line-height: 1.05;
+    .more-gallery-box:hover {
+      transform: scale(1.03);
+      background: #065f46;
     }
 
-    .hero h2 {
-      color: #fde68a;
-      font-size: clamp(24px, 3vw, 36px);
-      font-weight: normal;
-      margin: 20px 0;
-    }
-
-    .hero p {
-      max-width: 760px;
+    .contact {
+      background: #111827;
+      color: white;
+      border-radius: 28px;
+      padding: 60px 40px;
+      text-align: center;
+      max-width: 1100px;
       margin: auto;
+      box-shadow: 0 12px 35px rgba(0,0,0,0.15);
+    }
+
+    .contact .section-title {
+      color: white;
+    }
+
+    .contact p {
+      color: white;
       font-size: 20px;
     }
 
-    .button {
-  display: inline-block;
-  margin-top: 30px;
-  padding: 14px 28px;
-  background: #047857;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 999px;
-  border: 2px solid white;
-}
-
-    section {
-      max-width: 1180px;
-      margin: auto;
-      padding: 80px 24px;
-    }
-
-    .intro {
-      text-align: center;
-      max-width: 850px;
-    }
-
-    h2.section-title {
-      font-size: 42px;
-      color: #047857;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 28px;
-    }
-
-    .card {
-      background: white;
-      border-radius: 26px;
-      overflow: hidden;
-      box-shadow: 0 12px 35px rgba(0,0,0,0.09);
-    }
-
-    .card img {
-      width: 100%;
-      height: 230px;
-      object-fit: cover;
-      display: block;
-    }
-
-    .card-content {
-      padding: 28px;
-    }
-
-    .card h3 {
-      color: #047857;
-      font-size: 26px;
-      margin-top: 0;
-    }
-
-    .donate {
-      background: linear-gradient(135deg, #047857, #0f766e);
-      color: white;
-      border-radius: 32px;
-      padding: 60px;
-      text-align: center;
-      box-shadow: 0 16px 40px rgba(0,0,0,0.16);
-    }
-
-    .donate h2 {
-      font-size: 44px;
-      margin-top: 0;
-    }
-
-    .donation-grid {
-      display: flex;
-      justify-content: center;
-      align-items: stretch;
-      gap: 24px;
-      margin-top: 35px;
-      flex-wrap: nowrap;
-    }
-
-   .donation-box {
-  background: rgba(255,255,255,0.14);
-  backdrop-filter: blur(6px);
-
-  padding: 30px;
-  border-radius: 28px;
-  text-align: center;
-
-  box-shadow: 0 10px 30px rgba(0,0,0,0.10);
-
-  color: white;
-
-  display: flex;
-  flex-direction: column;
-
-  min-height: 520px;
-  width: 260px;
-}
-
-    .donation-box h3 {
-  color: white;
-  font-size: 28px;
-  margin: 0 0 30px 0;
-
-  min-height: 90px;
-
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-}
-
-    .donation-content {
-      flex-grow: 1;
-
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-    }
-
-   .donation-box p {
-  color: white;
-}
-    .donation-box strong {
-      display: block;
-      margin-top: 18px;
-      font-size: 34px;
+    .contact a {
       color: #facc15;
+      text-decoration: none;
+      font-weight: bold;
     }
 
-.donate-button {
-  display: inline-block;
-  margin-top: 20px;
-  padding: 12px 22px;
-
-  background: #facc15;
-  color: #102033;
-
-  text-decoration: none;
-  font-weight: bold;
-
-  border-radius: 999px;
-
-  transition: 0.3s;
-}
-
-.donate-button:hover {
-  transform: scale(1.05);
-  background: #fde047;
-}
-
-    .donate-button:hover {
-      transform: scale(1.05);
-      background: #fde047;
+    .contact a:hover {
+      text-decoration: underline;
     }
-
-    .gallery {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 18px;
-    }
-
-    .gallery img {
-      width: 100%;
-      height: 250px;
-      object-fit: cover;
-      border-radius: 22px;
-      box-shadow: 0 8px 24px rgba(0,0,0,0.12);
-    }
-    .more-gallery-box {
-  background: #047857;
-  color: white;
-  border-radius: 22px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  text-align: center;
-  text-decoration: none;
-
-  min-height: 250px;
-
-  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
-
-  transition: 0.3s;
-}
-
-.more-gallery-box:hover {
-  transform: scale(1.03);
-  background: #065f46;
-}
 
     footer {
       background: #111827;
@@ -602,14 +343,13 @@
     <a href="#gallery">Gallery</a>
     <a href="#contact">Contact</a>
 
-<a href="https://www.facebook.com/profile.php?id=61589764841935"
-   target="_blank"
-   style="margin-left:28px; vertical-align:middle;">
-
-  <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png"
-       alt="Facebook"
-       style="width:22px; vertical-align:middle;">
-</a>
+    <a href="https://www.facebook.com/profile.php?id=61589764841935"
+       target="_blank"
+       style="margin-left:28px; vertical-align:middle;">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png"
+           alt="Facebook"
+           style="width:22px; vertical-align:middle;">
+    </a>
   </nav>
 </header>
 
@@ -630,7 +370,6 @@
 </div>
 
 <section id="about" class="intro">
-
   <h2 class="section-title">
     Real friendship. Real support.
   </h2>
@@ -642,21 +381,17 @@
   <p>
     The work is mainly led by Igor, Phil and Hartmut. Friends and supporters contribute through donations, visits, materials, practical work and encouragement.
   </p>
-
 </section>
 
 <section id="projects">
-
   <h2 class="section-title">Our projects</h2>
 
   <div class="cards">
-
     <div class="card">
       <img src="project_food.jpg" alt="Food support in Guimaras">
 
       <div class="card-content">
         <h3>Food & daily support</h3>
-
         <p>
           Helping with food, basic needs and practical support for families and people who need encouragement and assistance.
         </p>
@@ -668,7 +403,6 @@
 
       <div class="card-content">
         <h3>Medical help</h3>
-
         <p>
           Supporting urgent medical needs and helping people access basic care where possible.
         </p>
@@ -680,7 +414,6 @@
 
       <div class="card-content">
         <h3>Housing & community help</h3>
-
         <p>
           Supporting practical local projects that improve living conditions step by step.
         </p>
@@ -692,21 +425,16 @@
 
       <div class="card-content">
         <h3>Education & opportunity</h3>
-
         <p>
           Helping children, youth and families with small but meaningful support that can open new opportunities.
         </p>
       </div>
     </div>
-
   </div>
-
 </section>
 
 <section id="donate">
-
   <div class="donate">
-
     <h2>Your support makes a difference.</h2>
 
     <p>
@@ -715,19 +443,15 @@
     </p>
 
     <div class="donation-grid">
-
       <div class="donation-box">
-
         <h3>🍚 Food Support</h3>
 
         <div class="donation-content">
-
           <p>
             Help provide meals and food packages for families.
           </p>
 
           <strong>€30</strong>
-
         </div>
 
         <a class="donate-button"
@@ -735,21 +459,17 @@
           target="_blank">
           Donate Food
         </a>
-
       </div>
 
       <div class="donation-box">
-
         <h3>📚 Become a Scholar</h3>
 
         <div class="donation-content">
-
           <p>
             Support one student for two semesters and help create future opportunities.
           </p>
 
           <strong>€250</strong>
-
         </div>
 
         <a class="donate-button"
@@ -757,21 +477,17 @@
           target="_blank">
           Support a Student
         </a>
-
       </div>
 
       <div class="donation-box">
-
         <h3>🏠 Housing Help</h3>
 
         <div class="donation-content">
-
           <p>
             Support simple housing repairs and shelter projects for families.
           </p>
 
           <strong>€100+</strong>
-
         </div>
 
         <a class="donate-button"
@@ -779,21 +495,17 @@
           target="_blank">
           Donate for Housing
         </a>
-
       </div>
 
       <div class="donation-box">
-
         <h3>💛 General Donation</h3>
 
         <div class="donation-content">
-
           <p>
             Help support ongoing local projects, emergency needs and community support.
           </p>
 
           <strong>Any Amount</strong>
-
         </div>
 
         <a class="donate-button"
@@ -801,35 +513,25 @@
           target="_blank">
           Donate Now
         </a>
-
       </div>
-
     </div>
 
     <div style="text-align:center; margin-top:50px;">
-
       <a class="button" href="donations.html">
         See More Donation Options
       </a>
-
     </div>
-
   </div>
-
 </section>
 
 <section id="gallery">
-
   <h2 class="section-title">
     Photos from Guimaras
   </h2>
 
   <div class="gallery">
-
     <img src="gallery_1.jpg" alt="Guimaras project photo 1">
-
     <img src="gallery_2.jpg" alt="Guimaras project photo 2">
-
     <img src="gallery_3.jpg" alt="Guimaras project photo 3">
 
     <a href="gallery.html" class="more-gallery-box">
@@ -838,13 +540,10 @@
         <h3>See More Photos</h3>
       </div>
     </a>
-
   </div>
-
 </section>
 
 <section id="videos">
-
   <h2 class="section-title">Videos</h2>
 
   <iframe
@@ -856,11 +555,10 @@
     allowfullscreen
     style="border-radius:22px;">
   </iframe>
+</section>
 
 <section id="contact">
-
   <div class="contact">
-
     <h2 class="section-title">
       Get in touch
     </h2>
@@ -886,364 +584,9 @@
         Friends of Guimaras Facebook Page
       </a>
     </p>
-
   </div>
-
-</section>
-<footer>
-  © 2026 Friends of Guimaras · Supporting people. Building futures.
-</footer>
-
-</body>
-</html>
-
-    footer {
-      background: #111827;
-      color: white;
-      text-align: center;
-      padding: 35px;
-    }
-
-    @media (max-width: 1100px) {
-      .donation-grid {
-        flex-wrap: wrap;
-      }
-    }
-
-    @media (max-width: 700px) {
-      header {
-        display: block;
-        text-align: center;
-      }
-
-      nav {
-        margin-top: 10px;
-      }
-
-      nav a {
-        margin: 0 8px;
-        font-size: 14px;
-      }
-
-      .donate {
-        padding: 35px 22px;
-      }
-
-      .donation-grid {
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .donation-box {
-        width: 100%;
-        max-width: 350px;
-      }
-    }
-  </style>
-</head>
-
-<body>
-
-<header>
-  <strong>Friends of Guimaras</strong>
-
-  <nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#donate">Donate</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#contact">Contact</a>
-
-<a href="https://www.facebook.com/profile.php?id=61589764841935"
-   target="_blank"
-   style="margin-left:28px; vertical-align:middle;">
-
-  <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png"
-       alt="Facebook"
-       style="width:22px; vertical-align:middle;">
-</a>
-  </nav>
-</header>
-
-<div class="hero">
-  <div>
-    <h1>Friends of Guimaras</h1>
-
-    <h2>Supporting people. Building futures.</h2>
-
-    <p>
-      A small community-driven initiative supporting people and local projects in Guimaras, Philippines.
-    </p>
-
-    <a class="button" href="#donate">
-      Support our work
-    </a>
-  </div>
-</div>
-
-<section id="about" class="intro">
-
-  <h2 class="section-title">
-    Real friendship. Real support.
-  </h2>
-
-  <p>
-    Friends of Guimaras is a volunteer initiative built on friendship, compassion and a shared wish to support people and communities in Guimaras, Philippines.
-  </p>
-
-  <p>
-    The work is mainly led by Igor, Phil and Hartmut. Friends and supporters contribute through donations, visits, materials, practical work and encouragement.
-  </p>
-
 </section>
 
-<section id="projects">
-
-  <h2 class="section-title">Our projects</h2>
-
-  <div class="cards">
-
-    <div class="card">
-      <img src="project_food.jpg" alt="Food support in Guimaras">
-
-      <div class="card-content">
-        <h3>Food & daily support</h3>
-
-        <p>
-          Helping with food, basic needs and practical support for families and people who need encouragement and assistance.
-        </p>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="project_medical.jpg" alt="Medical support">
-
-      <div class="card-content">
-        <h3>Medical help</h3>
-
-        <p>
-          Supporting urgent medical needs and helping people access basic care where possible.
-        </p>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="project_houses.jpg" alt="Housing support">
-
-      <div class="card-content">
-        <h3>Housing & community help</h3>
-
-        <p>
-          Supporting practical local projects that improve living conditions step by step.
-        </p>
-      </div>
-    </div>
-
-    <div class="card">
-      <img src="project_glasses.jpg" alt="Education support">
-
-      <div class="card-content">
-        <h3>Education & opportunity</h3>
-
-        <p>
-          Helping children, youth and families with small but meaningful support that can open new opportunities.
-        </p>
-      </div>
-    </div>
-
-  </div>
-
-</section>
-
-<section id="donate">
-
-  <div class="donate">
-
-    <h2>Your support makes a difference.</h2>
-
-    <p>
-      Donations help us support food, medical needs, materials,
-      housing-related help and local projects in Guimaras.
-    </p>
-
-    <div class="donation-grid">
-
-      <div class="donation-box">
-
-        <h3>🍚 Food Support</h3>
-
-        <div class="donation-content">
-
-          <p>
-            Help provide meals and food packages for families.
-          </p>
-
-          <strong>€30</strong>
-
-        </div>
-
-        <a class="donate-button"
-          href="https://paypal.me/YOURPAYPALNAME/30"
-          target="_blank">
-          Donate Food
-        </a>
-
-      </div>
-
-      <div class="donation-box">
-
-        <h3>📚 Become a Scholar</h3>
-
-        <div class="donation-content">
-
-          <p>
-            Support one student for two semesters and help create future opportunities.
-          </p>
-
-          <strong>€250</strong>
-
-        </div>
-
-        <a class="donate-button"
-          href="https://paypal.me/YOURPAYPALNAME/250"
-          target="_blank">
-          Support a Student
-        </a>
-
-      </div>
-
-      <div class="donation-box">
-
-        <h3>🏠 Housing Help</h3>
-
-        <div class="donation-content">
-
-          <p>
-            Support simple housing repairs and shelter projects for families.
-          </p>
-
-          <strong>€100+</strong>
-
-        </div>
-
-        <a class="donate-button"
-          href="https://paypal.me/YOURPAYPALNAME/100"
-          target="_blank">
-          Donate for Housing
-        </a>
-
-      </div>
-
-      <div class="donation-box">
-
-        <h3>💛 General Donation</h3>
-
-        <div class="donation-content">
-
-          <p>
-            Help support ongoing local projects, emergency needs and community support.
-          </p>
-
-          <strong>Any Amount</strong>
-
-        </div>
-
-        <a class="donate-button"
-          href="https://paypal.me/YOURPAYPALNAME"
-          target="_blank">
-          Donate Now
-        </a>
-
-      </div>
-
-    </div>
-
-    <div style="text-align:center; margin-top:50px;">
-
-      <a class="button" href="donations.html">
-        See More Donation Options
-      </a>
-
-    </div>
-
-  </div>
-
-</section>
-
-<section id="gallery">
-
-  <h2 class="section-title">
-    Photos from Guimaras
-  </h2>
-
-  <div class="gallery">
-
-    <img src="gallery_1.jpg" alt="Guimaras project photo 1">
-
-    <img src="gallery_2.jpg" alt="Guimaras project photo 2">
-
-    <img src="gallery_3.jpg" alt="Guimaras project photo 3">
-
-    <a href="gallery.html" class="more-gallery-box">
-      <div>
-        <span style="font-size:48px;">📷</span>
-        <h3>See More Photos</h3>
-      </div>
-    </a>
-
-  </div>
-
-</section>
-
-<section id="videos">
-
-  <h2 class="section-title">Videos</h2>
-
-  <iframe
-    width="100%"
-    height="500"
-    src="https://www.youtube.com/embed/iHvqx1yJ95s"
-    title="Friends of Guimaras Video"
-    frameborder="0"
-    allowfullscreen
-    style="border-radius:22px;">
-  <iframe ...></iframe>
-
-</section>
-
-<section id="contact">
-
-  <div class="contact">
-
-    <h2 class="section-title">
-      Get in touch
-    </h2>
-
-    <p>
-      Would you like to support, donate, share ideas or learn more about the projects in Guimaras?
-    </p>
-
-    <p>
-      Email:
-      <a href="mailto:info@friendsofguimaras.org">
-        info@friendsofguimaras.org
-      </a>
-    </p>
-
-    <p>
-      Website: friendsofguimaras.org
-    </p>
-
-    <p>
-      Facebook:
-      <a href="https://www.facebook.com/profile.php?id=61589764841935" target="_blank">
-        Friends of Guimaras Facebook Page
-      </a>
-    </p>
-
-  </div>
-
-</section>
 <footer>
   © 2026 Friends of Guimaras · Supporting people. Building futures.
 </footer>
