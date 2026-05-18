@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery | Friends of Guimaras</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f7f1e6;
+      color: #102033;
+    }
+
+    header {
+      background: #047857;
+      color: white;
+      text-align: center;
+      padding: 30px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 48px;
+    }
+
+    .container {
+      max-width: 1300px;
+      margin: auto;
+      padding: 60px 24px;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
+    }
+
+    .gallery-grid img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      border-radius: 24px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.12);
+    }
+
+    .back-button {
+      display: inline-block;
+      margin-top: 50px;
+      padding: 14px 28px;
+      background: #047857;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 999px;
+    }
+
+    .back-wrapper {
+      text-align: center;
+    }
+
+    footer {
+      background: #111827;
+      color: white;
+      text-align: center;
+      padding: 35px;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <h1>Photo Gallery</h1>
+</header>
+
+<div class="container">
+
+  <div class="gallery-grid">
+
+    <img src="gallery_1.jpg" alt="Gallery image 1">
+    <img src="gallery_2.jpg" alt="Gallery image 2">
+    <img src="gallery_3.jpg" alt="Gallery image 3">
+
+    <img src="project_food.jpg" alt="Food support">
+    <img src="project_medical.jpg" alt="Medical support">
+    <img src="project_houses.jpg" alt="Housing support">
+
+  </div>
+
+  <div class="back-wrapper">
+    <a class="back-button" href="index.html">
+      ← Back to Homepage
+    </a>
+  </div>
+
+</div>
+
+<footer>
+  © 2026 Friends of Guimaras · Supporting people. Building futures.
+</footer>
+
+</body>
+</html>
