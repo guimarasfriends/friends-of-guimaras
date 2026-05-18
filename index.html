@@ -6,7 +6,10 @@
   <title>Friends of Guimaras</title>
 
   <style>
-    * { box-sizing: border-box; }
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       margin: 0;
       font-family: Arial, sans-serif;
@@ -28,7 +31,11 @@
       box-shadow: 0 2px 12px rgba(0,0,0,0.08);
     }
 
-    header strong { color: #047857; font-size: 22px; }
+    header strong {
+      color: #047857;
+      font-size: 22px;
+    }
+
     nav a {
       margin-left: 22px;
       text-decoration: none;
@@ -144,73 +151,77 @@
     }
 
     .donation-grid {
-  display: flex;
-  justify-content: center;
-  align-items: stretch;
-  gap: 24px;
-  margin-top: 35px;
-  flex-wrap: nowrap;
-}
+      display: flex;
+      justify-content: center;
+      align-items: stretch;
+      gap: 24px;
+      margin-top: 35px;
+      flex-wrap: nowrap;
+    }
 
-.donation-box {
-  background: white;
-  padding: 30px;
-  border-radius: 28px;
-  text-align: center;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-  color: #102033;
+    .donation-box {
+      background: white;
+      padding: 30px;
+      border-radius: 28px;
+      text-align: center;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      color: #102033;
 
-  display: flex;
-  flex-direction: column;
+      display: flex;
+      flex-direction: column;
 
-  min-height: 500px;
-}
+      min-height: 520px;
+      width: 260px;
+    }
 
-.donation-box h3 {
-  color: #047857;
-  font-size: 28px;
-  margin: 0 0 30px 0;
+    .donation-box h3 {
+      color: #047857;
+      font-size: 28px;
+      margin: 0 0 30px 0;
 
-  min-height: 90px;
+      min-height: 90px;
 
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-}
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+    }
 
-.donation-box p {
-  color: #102033;
-}
+    .donation-content {
+      flex-grow: 1;
 
-.donation-box strong{
-  display:block;
-  margin-top:18px;
-  font-size:34px;
-  color:#facc15;
-}
-.donation-box strong{
-  display:block;
-  margin-top:18px;
-  font-size:28px;
-  color:#facc15;
-}
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
 
-    .donate-button{
-  display:inline-block;
-  margin-top:20px;
-  padding:12px 22px;
-  background:#facc15;
-  color:#102033;
-  text-decoration:none;
-  font-weight:bold;
-  border-radius:999px;
-  transition:0.3s;
-}
+    .donation-box p {
+      color: #102033;
+    }
 
-.donate-button:hover{
-  transform:scale(1.05);
-  background:#fde047;
-}
+    .donation-box strong {
+      display: block;
+      margin-top: 18px;
+      font-size: 34px;
+      color: #facc15;
+    }
+
+    .donate-button {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 22px;
+      background: #facc15;
+      color: #102033;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 999px;
+      transition: 0.3s;
+    }
+
+    .donate-button:hover {
+      transform: scale(1.05);
+      background: #fde047;
+    }
+
     .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -223,22 +234,6 @@
       object-fit: cover;
       border-radius: 22px;
       box-shadow: 0 8px 24px rgba(0,0,0,0.12);
-    }
-
-    .video-box {
-      background: white;
-      border-radius: 28px;
-      padding: 30px;
-      text-align: center;
-      box-shadow: 0 12px 35px rgba(0,0,0,0.09);
-    }
-
-    .video-placeholder {
-      background: #e5e7eb;
-      border-radius: 22px;
-      padding: 80px 20px;
-      color: #4b5563;
-      font-size: 20px;
     }
 
     .contact {
@@ -256,20 +251,39 @@
       padding: 35px;
     }
 
+    @media (max-width: 1100px) {
+      .donation-grid {
+        flex-wrap: wrap;
+      }
+    }
+
     @media (max-width: 700px) {
       header {
         display: block;
         text-align: center;
       }
+
       nav {
         margin-top: 10px;
       }
+
       nav a {
         margin: 0 8px;
         font-size: 14px;
       }
+
       .donate {
         padding: 35px 22px;
+      }
+
+      .donation-grid {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .donation-box {
+        width: 100%;
+        max-width: 350px;
       }
     }
   </style>
@@ -279,6 +293,7 @@
 
 <header>
   <strong>Friends of Guimaras</strong>
+
   <nav>
     <a href="#about">About</a>
     <a href="#projects">Projects</a>
@@ -291,32 +306,47 @@
 <div class="hero">
   <div>
     <h1>Friends of Guimaras</h1>
+
     <h2>Supporting people. Building futures.</h2>
+
     <p>
       A small community-driven initiative supporting people and local projects in Guimaras, Philippines.
     </p>
-    <a class="button" href="#donate">Support our work</a>
+
+    <a class="button" href="#donate">
+      Support our work
+    </a>
   </div>
 </div>
 
 <section id="about" class="intro">
-  <h2 class="section-title">Real friendship. Real support.</h2>
+
+  <h2 class="section-title">
+    Real friendship. Real support.
+  </h2>
+
   <p>
     Friends of Guimaras is a volunteer initiative built on friendship, compassion and a shared wish to support people and communities in Guimaras, Philippines.
   </p>
+
   <p>
     The work is mainly led by Igor, Phil and Hartmut. Friends and supporters contribute through donations, visits, materials, practical work and encouragement.
   </p>
+
 </section>
 
 <section id="projects">
+
   <h2 class="section-title">Our projects</h2>
 
   <div class="cards">
+
     <div class="card">
       <img src="project_food.jpg" alt="Food support in Guimaras">
+
       <div class="card-content">
         <h3>Food & daily support</h3>
+
         <p>
           Helping with food, basic needs and practical support for families and people who need encouragement and assistance.
         </p>
@@ -325,8 +355,10 @@
 
     <div class="card">
       <img src="project_medical.jpg" alt="Medical support">
+
       <div class="card-content">
         <h3>Medical help</h3>
+
         <p>
           Supporting urgent medical needs and helping people access basic care where possible.
         </p>
@@ -335,8 +367,10 @@
 
     <div class="card">
       <img src="project_houses.jpg" alt="Housing support">
+
       <div class="card-content">
         <h3>Housing & community help</h3>
+
         <p>
           Supporting practical local projects that improve living conditions step by step.
         </p>
@@ -344,18 +378,23 @@
     </div>
 
     <div class="card">
-      <img src="project_glasses.jpg" alt="Glasses support">
+      <img src="project_glasses.jpg" alt="Education support">
+
       <div class="card-content">
         <h3>Education & opportunity</h3>
+
         <p>
           Helping children, youth and families with small but meaningful support that can open new opportunities.
         </p>
       </div>
     </div>
+
   </div>
+
 </section>
 
 <section id="donate">
+
   <div class="donate">
 
     <h2>Your support makes a difference.</h2>
@@ -368,91 +407,129 @@
     <div class="donation-grid">
 
       <div class="donation-box">
-        <h3>🍚 Food Support</h3>
-        <p>Help provide meals and food packages for families.</p>
 
-        <strong>€30</strong>
+        <h3>🍚 Food Support</h3>
+
+        <div class="donation-content">
+
+          <p>
+            Help provide meals and food packages for families.
+          </p>
+
+          <strong>€30</strong>
+
+        </div>
 
         <a class="donate-button"
           href="https://paypal.me/YOURPAYPALNAME/30"
           target="_blank">
           Donate Food
         </a>
+
       </div>
 
       <div class="donation-box">
+
         <h3>📚 Become a Scholar</h3>
 
-        <p>
-          Support one student for two semesters and help create future opportunities.
-        </p>
+        <div class="donation-content">
 
-        <strong>€250</strong>
+          <p>
+            Support one student for two semesters and help create future opportunities.
+          </p>
+
+          <strong>€250</strong>
+
+        </div>
 
         <a class="donate-button"
           href="https://paypal.me/YOURPAYPALNAME/250"
           target="_blank">
           Support a Student
         </a>
+
       </div>
 
       <div class="donation-box">
+
         <h3>🏠 Housing Help</h3>
 
-        <p>
-          Support simple housing repairs and shelter projects for families.
-        </p>
+        <div class="donation-content">
 
-        <strong>€100+</strong>
+          <p>
+            Support simple housing repairs and shelter projects for families.
+          </p>
+
+          <strong>€100+</strong>
+
+        </div>
 
         <a class="donate-button"
           href="https://paypal.me/YOURPAYPALNAME/100"
           target="_blank">
           Donate for Housing
         </a>
+
       </div>
 
       <div class="donation-box">
+
         <h3>💛 General Donation</h3>
 
-        <p>
-          Help support ongoing local projects, emergency needs and community support.
-        </p>
+        <div class="donation-content">
 
-        <strong>Any Amount</strong>
+          <p>
+            Help support ongoing local projects, emergency needs and community support.
+          </p>
+
+          <strong>Any Amount</strong>
+
+        </div>
 
         <a class="donate-button"
           href="https://paypal.me/YOURPAYPALNAME"
           target="_blank">
           Donate Now
         </a>
+
       </div>
 
     </div>
 
     <div style="text-align:center; margin-top:50px;">
+
       <a class="button" href="donations.html">
         See More Donation Options
       </a>
+
     </div>
 
   </div>
+
 </section>
 
 <section id="gallery">
-  <h2 class="section-title">Photos from Guimaras</h2>
+
+  <h2 class="section-title">
+    Photos from Guimaras
+  </h2>
 
   <div class="gallery">
+
     <img src="gallery_1.jpg" alt="Guimaras project photo 1">
     <img src="gallery_2.jpg" alt="Guimaras project photo 2">
     <img src="gallery_3.jpg" alt="Guimaras project photo 3">
+
     <img src="project_food.jpg" alt="Food support">
     <img src="project_medical.jpg" alt="Medical support">
     <img src="project_houses.jpg" alt="Housing support">
+
   </div>
+
 </section>
 
 <section id="videos">
+
   <h2 class="section-title">Videos</h2>
 
   <iframe
@@ -468,22 +545,30 @@
 </section>
 
 <section id="contact">
+
   <div class="contact">
-    <h2 class="section-title">Get in touch</h2>
+
+    <h2 class="section-title">
+      Get in touch
+    </h2>
+
     <p>
       Would you like to support, donate, share ideas or learn more about the projects in Guimaras?
     </p>
-<p>Email: info@friendsofguimaras.org</p>
 
-<p>Website: friendsofguimaras.org</p>
+    <p>Email: info@friendsofguimaras.org</p>
 
-<p>
-  Facebook:
-  <a href="https://www.facebook.com/profile.php?id=61589764841935" target="_blank">
-    Friends of Guimaras Facebook Page
-  </a>
-</p>
+    <p>Website: friendsofguimaras.org</p>
+
+    <p>
+      Facebook:
+      <a href="https://www.facebook.com/profile.php?id=61589764841935" target="_blank">
+        Friends of Guimaras Facebook Page
+      </a>
+    </p>
+
   </div>
+
 </section>
 
 <footer>
